@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<style>
+#sign {
+    display: inline-block;
+    margin-bottom: 10px; padding: 5px;
+    font-size: 12px; font-weight: bold; color: white;
+    background-color: red;
+    transform: translate(0, 0);
+}
+.circle{width:200px;height:200px;background-color:coral;margin:20px auto;}
+.circle.action{-webkit-animation:square-to-circle 2s .5s infinite cubic-bezier(1,0.15,.29,1.21) alternate;
+    animation:square-to-circle 2s .5s infinite cubic-bezier(1,0.15,.29,1.21) alternate;}
+@-webkit-keyframes square-to-circle{
+    0%{border-radius:0 0 0 0;background:coral;-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    25%{border-radius:50% 0 0 0;background:darksalmon;-webkit-transform:rotate(45deg);transform:rotate(45deg);}
+    50%{border-radius:50% 50% 0 0;background:indianred;-webkit-transform:rotate(90deg);transform:rotate(90deg);}
+    75%{border-radius:50% 50% 50% 0;background:lightcoral;-webkit-transform:rotate(135deg);transform:rotate(135deg);}
+    100%{border-radius:50%;background:darksalmon;-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+}
+@keyframes square-to-circle{
+    0%{border-radius:0 0 0 0;background:coral;-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    25%{border-radius:50% 0 0 0;background:darksalmon;-webkit-transform:rotate(45deg);transform:rotate(45deg);}
+    50%{border-radius:50% 50% 0 0;background:indianred;-webkit-transform:rotate(90deg);transform:rotate(90deg);}
+    75%{border-radius:50% 50% 50% 0;background:lightcoral;-webkit-transform:rotate(135deg);transform:rotate(135deg);}
+    100%{border-radius:50%;background:darksalmon;-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+}
+</style>
+</head>
+
+<body>
+<div id="sign">7시간 밝혀내라</div>
+<div><button id="btn">멈추기</button></div>
+<div class="circle"></div>
+<div class="bts"><button id="addAction">액션추가</button><button id="removeAction">액션삭제</button></div>
+<script>
+(function () {
+
+    var xPos = 0, // loop에서 1씩 증가
+        handle = null; // cancelAnimationFrame에서 사용
+
+    var sign = document.getElementById('sign'),
+        btn = document.getElementById('btn');
+
+    var loop = function () {
+        sign.style.cssText = 'transform: translate(' + ++xPos + 'px, 0)';
+        handle = requestAnimationFrame(loop);
+    };
+
+    btn.addEventListener('click', function () {
+        // 멈추기
+        cancelAnimationFrame(handle);
+    }, false);
+
+    loop();
+
+    $("#addAction").on("click", function(){
+        $(".circle").addClass("action");
+    });
+
+    $("#removeAction").on("click", function(){
+        $(".circle").removeClass("action");
+    });
+})();
+</script>
+</body>
+
+</html>
