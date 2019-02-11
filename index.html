@@ -3,10 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<title>Jangsun</title>
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title>포트폴리오</title>
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<style>
 	@font-face {
 	font-family: 'Noto Sans KR';
@@ -16,9 +14,110 @@
 		url('http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff') format('woff'),
 		url('http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf') format('opentype');
 	}
-	html,body{font-family:'Open Sans', sans-serif, "Noto Sans KR", "Malgun Gothic", "맑은 고딕";font-size:16px;color:#333;text-align:center;}
+	html,body{font-family:"Noto Sans KR", "Malgun Gothic", "맑은 고딕";font-size:16px;color:#333;text-align:center;}
 	html, body, h1, h2, h3, h4, h5, h6, div, p, a, ul, li{padding:0;margin:0;}
-	.side-bar{position:relative;width:100%;height:auto;min-width:320px;padding:0 0 30px;background:#404766;}
+	.sketch{position:relative;width:100%;height:auto;min-width:320px;padding:0 0 30px;background:#404766;}
+	.sketch .description{color:#FFF;text-align:center;font-family:Verdana, "Nanum Gothic", "NanumGothic", "Malgun Gothic";margin-top:20px;}
+	.sketch h1{display:block;text-align:center;margin:0;padding:0;font-family:"Tahoma";color:#FFF;padding:10px 20px;}
+	.sketch div,
+	.sketch div::before,
+	.sketch div::after{content:'';
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+			-ms-box-sizing:border-box;
+			 -o-box-sizing:border-box;
+				box-sizing:border-box;}
+	.ryan{position:relative;width:300px;height:300px;margin:0 auto;}
+	.ryan .face{z-index:2;position:absolute;bottom:0;left:50%;width:296px;height:270px;margin:0 0 0 -147px;background:#daa22e;border:8px solid #000;border-radius:100%;}
+	.ryan .ear{z-index:1;position:absolute;top:20px;left:50%;width:218px;margin-left:-109px;}
+	.ryan .ear::before,
+	.ryan .ear::after{position:absolute;top:0;width:70px;height:70px;background:#daa22e;border:8px solid #000;
+		-webkit-border-radius:100%;
+		   -moz-border-radius:100%;
+			-ms-border-radius:100%;
+			 -o-border-radius:100%;
+				border-radius:100%;}
+	.ryan .ear::before{left:0;}
+	.ryan .ear::after{right:0;}
+	.ryan .eyebrow{z-index:3;position:absolute;top:115px;left:60px;width:182px;height:12px;}
+	.ryan .eyebrow::before,
+	.ryan .eyebrow::after{position:absolute;top:0;display:block;width:58px;height:10px;background:#000;border-radius:12px;}
+	.ryan .eyebrow::before{left:0;}
+	.ryan .eyebrow::after{right:0;transform:rotate(0deg);}
+	.ryan .eye{z-index:3;position:absolute;top:146px;left:50%;width:142px;margin-left:-71px;}
+	.ryan .eye::before,
+	.ryan .eye::after{display:block;position:absolute;top:0;width:20px;height:20px;background:#000;border-radius:100%;}
+	.ryan .eye::before{left:0;}
+	.ryan .eye::after{right:0;transform:rotate(0deg);}
+	.ryan .nose{z-index:4;position:absolute;top:174px;left:50%;width:24px;height:24px;margin-left:-12px;background:#000;border-radius:50% 50% 50% 50% / 40% 40% 60% 60%;}
+	.ryan .mouth{z-index:3;position:absolute;top:179px;left:50%;width:94px;height:50px;margin-left:-47px;}
+	.ryan .mouth .left,
+	.ryan .mouth .right{position:absolute;top:0;width:58px;height:50px;background:#FFF;border:8px solid #000;border-radius:100%;}
+	.ryan .mouth .left{left:0;}
+	.ryan .mouth .right{right:0;}
+	.ryan .mouth::before,
+	.ryan .mouth::after{z-index:3;position:absolute;top:13px;left:50%;display:block;width:24px;height:22px;background:#FFF;
+		-webkit-transform:rotate(45deg);
+		   -moz-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			 -o-transform:rotate(45deg);
+				transform:rotate(45deg);}
+	.ryan .mouth::before{margin-left:-21px;}
+	.ryan .mouth::after{margin-right:22px;}
+	.ryan .heart{z-index:5;position:absolute;top:135px;right:0px;width:60px;height:50px;opacity:0;}
+	.ryan .heart:before,
+	.ryan .heart:after{position:absolute;left:15px;top:0;width:15px;height:25px;background:#f00;
+		-moz-border-radius:50px 50px 0 0;
+		border-radius:50px 50px 0 0;
+		-webkit-transform:rotate(-45deg);
+		   -moz-transform:rotate(-45deg);
+			-ms-transform:rotate(-45deg);
+			 -o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+		-webkit-transform-origin:0 100%;
+		   -moz-transform-origin:0 100%;
+			-ms-transform-origin:0 100%;
+			 -o-transform-origin:0 100%;
+				transform-origin:0 100%;}
+	.ryan .heart:after {left:0;
+		-webkit-transform:rotate(45deg);
+		   -moz-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			 -o-transform:rotate(45deg);
+				transform:rotate(45deg);
+		-webkit-transform-origin:100% 100%;
+		   -moz-transform-origin:100% 100%;
+			-ms-transform-origin:100% 100%;
+			 -o-transform-origin:100% 100%;
+				transform-origin :100% 100%;}
+	.ryan .eyebrow::after,
+	.ryan .eye::after,
+	.ryan .heart,
+	.ryan.action .eyebrow::after,
+	.ryan.action .eye::after,
+	.ryan.action .heart{
+		-webkit-transition:all 0.03s linear;
+		   -moz-transition:all 0.03s linear;
+			-ms-transition:all 0.03s linear;
+			 -o-transition:all 0.03s linear;
+				transition:all 0.03s linear;}
+	.ryan.action .eyebrow::after{transform:rotate(-10deg);}
+	.ryan.action .eye::after{top:5px;right:-10px;width:30px;height:6px;border-radius:8px;transform:rotate(-5deg);}
+
+	@keyframes fade {
+		25%{opacity:1;transform-origin:center center;}
+		75%{transform-origin:center center;
+		-webkit-transform:scale(2, 2);
+		   -moz-transform:scale(2, 2);
+			 -o-transform:scale(2, 2);
+				transform:scale(2, 2);}
+		100%{opacity:0;transform-origin:center center;
+		-webkit-transform:scale(2, 2);
+		   -moz-transform:scale(2, 2);
+			 -o-transform:scale(2, 2);
+				transform:scale(2, 2);}
+	}
+	.ryan.action .heart{animation:fade 1s ease 0.03s;}
 
 	.all_wrap{text-align:left;width:100%;min-width:320px;padding:60px 20px;margin:0 auto;box-sizing:border-box;}
 	.all_wrap div{box-sizing:border-box;}
@@ -45,19 +144,32 @@
 	</style>
 </head>
 <body>
-<div class="side-bar">
-	<h1>Jangsun</h1>
+<div class="sketch">
+	<div class="ryan" id="watchme">
+		<div class="face"></div>
+		<div class="ear"></div>
+		<div class="eyebrow"></div>
+		<div class="eye"></div>
+		<div class="mouth">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+		<div class="nose"></div>
+		<div class="heart"></div>
+	</div>
+	<p class="description">Touch plz!<br>No Image, Only CSS!</p>
 </div>
 <div class="all_wrap">
+	<h1>포트폴리오</h1>
+	<h2>웹UI개발자 <em>장선희</em>입니다.</h2>
 	<p class="description">
-		총 경력 8년 9개월_<br>
+		총 경력 10년 0개월_<br>
 		HTML5, CSS3, SASS_<br>
 		jQuery, jQuery Plugin 활용도 ↑,  JavaScript_<br>
 		반응형, 크로스 브라우징_<br>
 		Sublime Text, Visual Studio code_<br>
 		Git, SVN, Slack, Trello_<br>
-		Photoshop, Illustrator_<br>
-		아래 내용 중 특별한 사항이 없는 경우 100% 전담 작업하였음_
+		Photoshop, Illustrator_
 	</p>
 	<!-- wrap -->
 	<div class="wrap">
