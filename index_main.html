@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Jangsun</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<!-- all-frame -->
+<div id="all-frame">	
+	<div id="frame-border"></div>
+	<!-- main-frame -->
+	<div id="main-frame">
+		<div class="common-header">
+			<a href="index_main.html" class="header-ci">J</a>
+			<a href="" class="header-nav"><span></span></a>
+			<div class="header-menu">
+				<a href="about.html">About_</a>
+				<a href="carrer.html">Carrer_</a>
+				<a href="project.html">Project_</a>
+				<button type="button" class="close-header-menu">닫기</button>
+			</div>
+		</div>
+		<!-- in-frame -->
+		<div class="in-frame">
+			<div class="name-card">
+				<h1>Jang seon hui</h1>
+				<p>web ui developer</p>
+			</div>
+			<div class="nav">
+				<a href="about.html">About</a>
+				<a href="carrer.html">Carrer</a>
+				<a href="project.html">Project</a>
+			</div>
+		</div>
+		<!-- //in-frame -->
+	</div>	
+	<!-- //main-frame -->
+</div>
+<!-- //all-frame -->
+<script>
+$(function() {
+	$(".header-nav").on("click", function(e) {
+		e.preventDefault();
+		$(".header-menu").removeClass("non-action").addClass("action");
+	});
+	$(".close-header-menu").on("click", function(e) {
+		e.preventDefault();
+		$(".header-menu").removeClass("action").addClass("non-action");
+	});
+});
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Jangsun</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<!-- all-frame -->
+<div id="all-frame">	
+	<!-- sub-frame -->
+	<div id="sub-frame">
+		<div class="common-header">
+			<a href="index_main.html" class="header-ci">J</a>
+			<a href="" class="header-nav"><span></span></a>
+			<div class="header-menu">
+				<a href="about.html">About_</a>
+				<a href="carrer.html">Carrer_</a>
+				<a href="project.html">Project_</a>
+				<button type="button" class="close-header-menu">닫기</button>
+			</div>
+		</div>
+		<!-- in-frame -->
+		<div class="in-frame">
+            <h1>About</h1>			
+            <article class="article">
+                    디자이너와 개발자를 존중할줄 아는 웹UI개발자입니다.<br>
+                    html과 css로 무언가 만들어내는 것을 사랑하지만 vue.js를 익히고 vue.js도 사랑하게 만들어 프론트엔드개발자로 전향하는 것이 2019년 목표입니다.<br>
+                    최고라고 자부할수는 없지만 최선을 다하는 편이며 현재는 하나투어에서 웹UI개발자로 재직 중입니다.
+                    <br><br>
+                    010.8744.7091<br>
+                    01064327091@naver.com<br>
+                    <a href="https://www.instagram.com/jang_sun2/" target="_blank">instagram</a>
+            </article>
+            <h2>Skills</h2>
+            <!-- skills-section -->
+            <section class="skills-section">
+                <ul>
+                    <li>
+                        <div class="skills-img">
+                            <img src="img/skills_html.jpg" alt="">
+                            <span>HTML</span>
+                        </div>
+                        <div class="skills-bar">
+                            <span class="skills-bar-in" style="width:80%">80%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills-img">
+                            <img src="img/skills_js.jpg" alt="">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skills-bar">
+                            <span class="skills-bar-in" style="width:20%">20%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills-img">
+                            <img src="img/skills_jquery.jpg" alt="">
+                            <span>jQuery</span>
+                        </div>
+                        <div class="skills-bar">
+                            <span class="skills-bar-in" style="width:70%">70%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills-img">
+                            <img src="img/skills_react.jpg" alt="">
+                            <span>react</span>
+                        </div>
+                        <div class="skills-bar">
+                            <span class="skills-bar-in" style="width:10%">10%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills-img">
+                            <img src="img/skills_sass.jpg" alt="">
+                            <span>SASS</span>
+                        </div>
+                        <div class="skills-bar">
+                            <span class="skills-bar-in" style="width:40%">40%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills-img">
+                            <img src="img/skills_vue.jpg" alt="">
+                            <span>vue.js</span>
+                        </div>
+                        <div class="skills-bar">
+                            <span class="skills-bar-in" style="width:10%">10%</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!-- //skills-section -->
+            <h2>Others</h2>
+            <section class="other-section">
+                <ul>
+                    <li><img src="img/others_git.jpg" alt=""><span>Git</span></li>
+                    <li><img src="img/others_photoshop.jpg" alt=""><span>PhotoShop</span></li>
+                    <li><img src="img/others_slack.jpg" alt=""><span>Slack</span></li>
+                    <li><img src="img/others_vs.jpg" alt=""><span>Visual Studio Code</span></li>
+                    <li><img src="img/others_trello.jpg" alt=""><span>Trello</span></li>
+                </ul>
+            </section>
+		</div>
+		<!-- //in-frame -->
+	</div>	
+	<!-- //sub-frame -->
+</div>
+<!-- //all-frame -->
+<script>
+$(function() {
+	$(".header-nav").on("click", function(e) {
+		e.preventDefault();
+		$(".header-menu").removeClass("non-action").addClass("action");
+	});
+	$(".close-header-menu").on("click", function(e) {
+		e.preventDefault();
+		$(".header-menu").removeClass("action").addClass("non-action");
+	});
+});
+</script>
+</body>
+</html>
+ 
