@@ -104,12 +104,11 @@ article.article a{border-bottom:1px solid #777;}
 .project-list{}
 .project-list ul{display:block;}
 .project-list li{position:relative;display:block;margin:0 0 30px;}
-.project-list li a{z-index:2;position:relative;display:flex;width:100%;height:100%;height:182px;align-items:center;justify-content:center;border-radius:20px;overflow:hidden;transition:all 0.2s;}
+.project-list li a{z-index:2;position:relative;display:flex;width:100%;height:100%;height:182px;align-items:center;justify-content:center;border-radius:20px;overflow:hidden;}
 .project-list li a .thumb-box{position:absolute;top:0;left:0;bottom:0;right:0;}
 .project-list li a .thumb-box:before{content:'';z-index:2;position:absolute;top:0;left:0;right:0;bottom:0;background:#000;opacity:0.4;}
 .project-list li a .thumb-box img{z-index:1;position:relative;width:100%;height:auto;}
 .project-list li a .title{z-index:2;position:relative;text-align:center;color:#FFF;font-size:1.875em;letter-spacing:-2px;text-align:center;line-height:1;font-weight:normal;line-height:140%;word-break:keep-all;padding:0 30px;}
-.project-list li a:hover{transform:scale(1.08);}
 
 /* modal-frame */
 #modal-frame{z-index:-20000;position:fixed;top:0;left:0;right:0;bottom:0;padding:100px 50px 50px 50px;background:#FFF;overflow-y:auto;opacity:0;
@@ -229,6 +228,10 @@ article.article a{border-bottom:1px solid #777;}
     }
 
 @media only screen and (min-width:1000px){
+    #main-frame:after{content:'';display:block;clear:both;}
+    #main-frame .name-card{float:left;display:inline-block;width:46%;padding:50px 50px 180px;margin:0 10px 0;}
+    #main-frame .nav{float:right;display:inline-block;width:49%;}
+    #modal-frame{top:50%;left:50%;right:inherit;bottom:inherit;width:800px;height:auto;margin-left:-400px;}
     .in-frame{margin-top:100px;}
     .common-header a.header-nav{display:none;}
     .common-header .header-menu,
@@ -236,8 +239,6 @@ article.article a{border-bottom:1px solid #777;}
     .common-header .header-menu a{display:inline-block;height:50px;font-size:1em;line-height:50px;font-weight:bold;padding:0 40px;margin:0 0 0 20px;border:0;border-radius:6px;transition:none;}
     .common-header .header-menu a:hover{transform:scale(1);background:#eee;transition:all 0.3s ease-out;}
     .common-header .header-menu button.close-header-menu{display:none;}
-    #main-frame:after{content:'';display:block;clear:both;}
-    #main-frame .name-card{float:left;display:inline-block;width:46%;padding:50px 50px 180px;margin:0 10px 0;}
-    #main-frame .nav{float:right;display:inline-block;width:49%;}
-    #modal-frame{top:50%;left:50%;right:inherit;bottom:inherit;width:800px;height:auto;margin-left:-400px;}
+    .project-list li a{transition:all 0.2s;}
+    .project-list li a:hover{transform:scale(1.08);}
 }
