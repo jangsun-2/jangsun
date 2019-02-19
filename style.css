@@ -57,6 +57,7 @@ button{background:none;border:0;padding:0;margin:0;outline:0;}
 #main-frame .nav a:nth-child(2):hover{border-color:#f63e2d;}
 #main-frame .nav a:nth-child(3):after{background:#00cc99;}
 #main-frame .nav a:nth-child(3):hover{border-color:#00cc99;}
+#main-frame .common-header{background:none;}
 
 /* sub-frame */
 #sub-frame{min-height:100vh;background:#f5e7d8;}
