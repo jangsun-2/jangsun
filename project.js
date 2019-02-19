@@ -48,6 +48,7 @@ $(function() {
         var $this = $(this),
             code = $this.attr("data-id");
 
+        $("#sub-frame").css("opacity", 0);
         modal.removeClass("non-action").addClass("action");
 
         jQuery.each(projects, function(i, val) {
@@ -69,6 +70,7 @@ $(function() {
     });
 
     $(".close-modal").on("click", function(e) {
+        $("#sub-frame").css("opacity", 1);
         modal.removeClass("action").addClass("non-action");
     })
 });
