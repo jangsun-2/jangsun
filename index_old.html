@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>포트폴리오</title>
+	<link rel="stylesheet" href="http://jangsun.cf/style.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<style>
+	@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src: url('http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2') format('woff2'),
+		url('http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff') format('woff'),
+		url('http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf') format('opentype');
+	}
+	html,body{font-family:"Noto Sans KR", "Malgun Gothic", "맑은 고딕";font-size:16px;color:#333;text-align:center;}
+	html, body, h1, h2, h3, h4, h5, h6, div, p, a, ul, li{padding:0;margin:0;}
+	.sketch{position:relative;width:100%;height:auto;min-width:320px;padding:0 0 30px;background:#404766;}
+	.sketch .description{color:#FFF;text-align:center;font-family:Verdana, "Nanum Gothic", "NanumGothic", "Malgun Gothic";margin-top:20px;}
+	.sketch h1{display:block;text-align:center;margin:0;padding:0;font-family:"Tahoma";color:#FFF;padding:10px 20px;}
+	.sketch div,
+	.sketch div::before,
+	.sketch div::after{content:'';
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+			-ms-box-sizing:border-box;
+			 -o-box-sizing:border-box;
+				box-sizing:border-box;}
+	.ryan{position:relative;width:300px;height:300px;margin:0 auto;}
+	.ryan .face{z-index:2;position:absolute;bottom:0;left:50%;width:296px;height:270px;margin:0 0 0 -147px;background:#daa22e;border:8px solid #000;border-radius:100%;}
+	.ryan .ear{z-index:1;position:absolute;top:20px;left:50%;width:218px;margin-left:-109px;}
+	.ryan .ear::before,
+	.ryan .ear::after{position:absolute;top:0;width:70px;height:70px;background:#daa22e;border:8px solid #000;
+		-webkit-border-radius:100%;
+		   -moz-border-radius:100%;
+			-ms-border-radius:100%;
+			 -o-border-radius:100%;
+				border-radius:100%;}
+	.ryan .ear::before{left:0;}
+	.ryan .ear::after{right:0;}
+	.ryan .eyebrow{z-index:3;position:absolute;top:115px;left:60px;width:182px;height:12px;}
+	.ryan .eyebrow::before,
+	.ryan .eyebrow::after{position:absolute;top:0;display:block;width:58px;height:10px;background:#000;border-radius:12px;}
+	.ryan .eyebrow::before{left:0;}
+	.ryan .eyebrow::after{right:0;transform:rotate(0deg);}
+	.ryan .eye{z-index:3;position:absolute;top:146px;left:50%;width:142px;margin-left:-71px;}
+	.ryan .eye::before,
+	.ryan .eye::after{display:block;position:absolute;top:0;width:20px;height:20px;background:#000;border-radius:100%;}
+	.ryan .eye::before{left:0;}
+	.ryan .eye::after{right:0;transform:rotate(0deg);}
+	.ryan .nose{z-index:4;position:absolute;top:174px;left:50%;width:24px;height:24px;margin-left:-12px;background:#000;border-radius:50% 50% 50% 50% / 40% 40% 60% 60%;}
+	.ryan .mouth{z-index:3;position:absolute;top:179px;left:50%;width:94px;height:50px;margin-left:-47px;}
+	.ryan .mouth .left,
+	.ryan .mouth .right{position:absolute;top:0;width:58px;height:50px;background:#FFF;border:8px solid #000;border-radius:100%;}
+	.ryan .mouth .left{left:0;}
+	.ryan .mouth .right{right:0;}
+	.ryan .mouth::before,
+	.ryan .mouth::after{z-index:3;position:absolute;top:13px;left:50%;display:block;width:24px;height:22px;background:#FFF;
+		-webkit-transform:rotate(45deg);
+		   -moz-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			 -o-transform:rotate(45deg);
+				transform:rotate(45deg);}
+	.ryan .mouth::before{margin-left:-21px;}
+	.ryan .mouth::after{margin-right:22px;}
+	.ryan .heart{z-index:5;position:absolute;top:135px;right:0px;width:60px;height:50px;opacity:0;}
+	.ryan .heart:before,
+	.ryan .heart:after{position:absolute;left:15px;top:0;width:15px;height:25px;background:#f00;
+		-moz-border-radius:50px 50px 0 0;
+		border-radius:50px 50px 0 0;
+		-webkit-transform:rotate(-45deg);
+		   -moz-transform:rotate(-45deg);
+			-ms-transform:rotate(-45deg);
+			 -o-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+		-webkit-transform-origin:0 100%;
+		   -moz-transform-origin:0 100%;
+			-ms-transform-origin:0 100%;
+			 -o-transform-origin:0 100%;
+				transform-origin:0 100%;}
+	.ryan .heart:after {left:0;
+		-webkit-transform:rotate(45deg);
+		   -moz-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			 -o-transform:rotate(45deg);
+				transform:rotate(45deg);
+		-webkit-transform-origin:100% 100%;
+		   -moz-transform-origin:100% 100%;
+			-ms-transform-origin:100% 100%;
+			 -o-transform-origin:100% 100%;
+				transform-origin :100% 100%;}
+	.ryan .eyebrow::after,
+	.ryan .eye::after,
+	.ryan .heart,
+	.ryan.action .eyebrow::after,
+	.ryan.action .eye::after,
+	.ryan.action .heart{
+		-webkit-transition:all 0.03s linear;
+		   -moz-transition:all 0.03s linear;
+			-ms-transition:all 0.03s linear;
+			 -o-transition:all 0.03s linear;
+				transition:all 0.03s linear;}
+	.ryan.action .eyebrow::after{transform:rotate(-10deg);}
+	.ryan.action .eye::after{top:5px;right:-10px;width:30px;height:6px;border-radius:8px;transform:rotate(-5deg);}
+
+	@keyframes fade {
+		25%{opacity:1;transform-origin:center center;}
+		75%{transform-origin:center center;
+		-webkit-transform:scale(2, 2);
+		   -moz-transform:scale(2, 2);
+			 -o-transform:scale(2, 2);
+				transform:scale(2, 2);}
+		100%{opacity:0;transform-origin:center center;
+		-webkit-transform:scale(2, 2);
+		   -moz-transform:scale(2, 2);
+			 -o-transform:scale(2, 2);
+				transform:scale(2, 2);}
+	}
+	.ryan.action .heart{animation:fade 1s ease 0.03s;}
+
+	.all_wrap{text-align:left;width:100%;min-width:320px;padding:60px 20px;margin:0 auto;box-sizing:border-box;}
+	.all_wrap div{box-sizing:border-box;}
+	.all_wrap h1{display:inline-block;font-size:2.500em;font-weight:500;letter-spacing:-0.025em;color:#000;padding:0.250em 1em 0 0;border-top:3px solid #000;}
+	.all_wrap h2{color:#000;font-weight:500;padding:40px 20px;border:1px solid #f9a73c;border-width:1px 0;margin:50px -20px 10px -20px;}
+	.all_wrap h2 em{color:#ff5000;font-style:normal;}
+	.all_wrap .description{margin-top:20px;}
+	.all_wrap .wrap .company_title{margin:50px 0 20px 0;}
+	.all_wrap .wrap .company_title h4{display:inline-block;font-size:1.688em;font-weight:500;color:#050706;padding:10px 0 0 0;border-top:2px solid #050706;}
+	.all_wrap .wrap .company_title p{color:#888;font-size:0.875em;}
+	.all_wrap .wrap .career_wrap{}
+	.all_wrap .wrap .career_wrap strong{font-weight:500;color:#ff5000;padding-left:18px;background:url('https://www.smilegate.com/ko/images/company/bgRoom_on.jpg') 0 center no-repeat;}
+	.all_wrap .wrap .career_wrap ul{display:block;margin:10px 0 20px 0;}
+	.all_wrap .wrap .career_wrap ul li{color:#555;font-size:1em;line-height:1.375em;list-style:none;}
+	.all_wrap .wrap .career_wrap ul li a{color:#555;text-decoration:underline;}
+	.all_wrap .others{font-style:italic;margin-top:50px;}
+	footer{z-index:2;position:relative;font-size:0.813em;font-weight:300;color:#999;padding:30px 20px;background:#f4f4f4;}
+	@media only screen and (min-width:1000px){
+		html{position:relative;}
+		.sketch{position:fixed;top:0;left:0;bottom:0;width:380px;padding:160px 0 0 0;}
+		.all_wrap{padding:60px 40px 60px 430px;margin:0;}
+		.all_wrap h2{margin:50px 0 10px 0;}
+	}
+	</style>
+</head>
+<body>
+<div class="sketch">
+	<div class="ryan" id="watchme">
+		<div class="face"></div>
+		<div class="ear"></div>
+		<div class="eyebrow"></div>
+		<div class="eye"></div>
+		<div class="mouth">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+		<div class="nose"></div>
+		<div class="heart"></div>
+	</div>
+	<p class="description">Touch plz!<br>No Image, Only CSS!</p>
+</div>
+<div class="all_wrap">
+	<h1>포트폴리오</h1>
+	<h2>웹UI개발자 <em>장선희</em>입니다.</h2>
+	<p class="description">
+		총 경력 10년 0개월_<br>
+		HTML5, CSS3, SASS_<br>
+		jQuery, jQuery Plugin 활용도 ↑,  JavaScript_<br>
+		반응형, 크로스 브라우징_<br>
+		Sublime Text, Visual Studio code_<br>
+		Git, SVN, Slack, Trello_<br>
+		Photoshop, Illustrator_
+	</p>
+	<!-- wrap -->
+	<div class="wrap">
+		<div class="company_title">
+			<h4>투어팁스</h4>
+			<p>서비스개발팀 과장 팀원(현재 재직 중)</p>
+		</div>
+		<!-- career_wrap -->
+		<div class="career_wrap">
+			<strong>투어팁스 PC/MO 리뉴얼</strong>
+			<ul>
+				<li>
+					<a href="http://www.tourtips.com/" target="_blank">PC : http://www.tourtips.com/</a>
+				</li>
+				<li>
+					<a href="http://m.tourtips.com/" target="_blank">MO : http://m.tourtips.com/</a>
+				</li>
+				<li>
+					<p>PC와 모바일 웹사이트이며 90%이상 전담하여 작업.</p>
+				</li>
+			</ul>
+			<strong>하나투어 겟어바웃 트래블 웹진</strong>
+			<ul>
+				<li>
+					<a href="http://getabout.hanatour.com/" target="_blank">http://getabout.hanatour.com/</a>
+				</li>
+				<li>
+					<p>PC/모바일 웹사이트이며 100% 전담 작업.</p>
+				</li>
+			</ul>
+			<ul>
+				<strong>하나투어 여행정보 사이트</strong>
+				<li>
+					<a href="http://getabout.hanatour.com/" target="_blank">PC : http://getabout.hanatour.com/</a>
+				</li>
+				<li>
+					<a href="http://minfo.hanatour.com/" target="_blank">MO : http://minfo.hanatour.com/</a>
+				</li>
+				<li>
+					<p>PC/모바일 웹사이트이며 100% 전담 작업.</p>
+				</li>
+			</ul>
+		</div>
+		<!-- //career_wrap -->
+		<div class="company_title">
+			<h4>비상교육</h4>
+			<p>이러닝사업부 웹디자인팀 팀원</p>
+		</div>
+		<!-- career_wrap -->
+		<div class="career_wrap">
+			<strong>수박씨닷컴 PC/MO 리뉴얼</strong>
+			<ul>
+				<li>
+					<a href="http://www.soobakc.com" target="_blank">http://www.soobakc.com</a>
+				</li>
+				<li>웹퍼블리싱 작업 80%작업</li>
+			</ul>
+			<strong>아이수박씨닷컴 운영</strong>
+			<ul>
+				<li><a href="https://www.isoobakc.com/index.asp" target="_blank">https://www.isoobakc.com/index.asp</a></li>
+				<li>웹퍼블리싱 담당</li>
+			</ul>
+		</div>
+		<!-- //career_wrap -->
+		<div class="company_title">
+			<h4>SK커뮤니케이션즈</h4>
+			<p>웹UI개발팀 매니저</p>
+		</div>
+		<!-- career_wrap -->
+		<div class="career_wrap">
+			<strong>싸이월드 미니홈피 다이어리 리뉴얼</strong>
+			<ul>
+				<li>웹UI개발 담당자로 미니홈피 리뉴얼을 하며 웹표준 및 접근성 향상 작업.</li>
+				<li>작업 참여도 50%</li>
+			</ul>
+			<strong>싸이월드 선물가게</strong>
+			<ul>
+				<li><p>웹UI개발 담당자로 메인 페이지 리뉴얼 및 상품프로모션 페이지 제작.</p></li>
+				<li>작업 참여도 : 80%</li>
+			</ul>
+			<strong>싸이월드 모바일 선물가게</strong>
+			<ul>
+				<li>웹UI개발 담당자로 선물가게 모바일 페이지 구축</li>
+			</ul>
+		</div>
+		<!-- //career_wrap -->
+		<div class="company_title">
+			<h4>유답소프트</h4>
+			<p>Web팀 대리</p>
+		</div>
+		<!-- career_wrap -->
+		<div class="career_wrap">
+			<ul>
+				<li>웅진코웨이 경영지원시스템 웹디자인 및 HTML퍼블리셔</li>
+				<li>동부제철 전자구매시스템 웹디자인 및 HTML퍼블리셔</li>
+				<li>한화건설 전자구매시스템 웹디자인 및 HTML퍼블리셔</li>
+				<li>삼성에버랜드골프장 서브 디자인 및 웹UI개발</li>
+			</ul>
+		</div>
+		<!-- //career_wrap -->
+		<div class="others">
+			그밖에 서울대 체육학과 홈페이지 웹사이트 작업, KT이노에듀에서 프리랜서로도 작업한 경험이 있습니다.
+		</div>
+	</div>
+	<!-- //wrap -->
+</div>
+<footer>
+	<p>본 페이지는 IE10이상, 크롬, 사파리, 파이어폭스 브라우저에 최적화 되어 있습니다.</p>
+	<small>© Jang Seon Hui. All Rights Reserved.</small>
+</footer>
+<script>
+function removeAction() {
+	$(".ryan").removeClass("action");
+}
+
+$(function() {
+	$(".ryan").on("click", function() {
+		$(this).addClass("action");
+		setTimeout("removeAction()", 600);
+	});
+});
+</script>
+</body>
+</html>
