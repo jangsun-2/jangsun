@@ -14,14 +14,14 @@ button{background:none;border:0;padding:0;margin:0;outline:0;}
 .in-frame{max-width:800px;margin:0 auto;}
 
 /* common-header */
-.common-header{z-index:10000;position:fixed;top:0;left:0;right:0;height:30px;padding:20px;background-color:rgba(245, 231, 216, 0.9)}
+.common-header{z-index:10000;position:fixed;top:0;left:0;right:0;height:50px;padding:20px;background-color:rgba(245, 231, 216, 0.9)}
 .common-header a{display:inline-block;border-radius:6px;transition:all 0.3s ease-out;}
 .common-header a:hover,
 .common-header a:hover{background:#eee;}
 .common-header a.header-ci,
-.common-header a.header-nav{position:absolute;top:0;width:50px;height:50px;text-align:center;}
-.common-header a.header-ci{z-index:200;left:0;font-size:1.875em;font-weight:bold;color:#00cc99;line-height:52px;}
-.common-header a.header-nav{right:0;}
+.common-header a.header-nav{position:absolute;top:20px;width:50px;height:50px;text-align:center;}
+.common-header a.header-ci{z-index:200;left:20px;font-size:1.875em;font-weight:bold;color:#00cc99;line-height:52px;}
+.common-header a.header-nav{right:20px;}
 .common-header a.header-nav span{position:absolute;top:50%;left:50%;display:block;width:25px;height:3px;margin:-1px 0 0 -12px;background:#00cc99;}
 .common-header a.header-nav span:before,
 .common-header a.header-nav span:after{content:'';position:absolute;left:0;display:block;width:100%;height:3px;background:#00cc99;}
