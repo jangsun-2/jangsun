@@ -235,7 +235,7 @@ article.article a{border-bottom:1px solid #777;}
     .in-frame{margin-top:100px;}
     .common-header a.header-nav{display:none;}
     .common-header .header-menu,
-    .common-header .header-menu.non-action{position:absolute;top:0;right:0;left:inherit;display:inline-block;text-align:right;padding:0;transform:translateY(0);background:none;animation:none;-webkit-animation:none;}
+    .common-header .header-menu.non-action{position:absolute;top:20px;right:20px;left:inherit;display:inline-block;text-align:right;padding:0;transform:translateY(0);background:none;animation:none;-webkit-animation:none;}
     .common-header .header-menu a{display:inline-block;height:50px;font-size:1em;line-height:50px;font-weight:bold;padding:0 40px;margin:0 0 0 20px;border:0;border-radius:6px;transition:none;}
     .common-header .header-menu a:hover{transform:scale(1);background:#eee;transition:all 0.3s ease-out;}
     .common-header .header-menu button.close-header-menu{display:none;}
