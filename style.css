@@ -14,14 +14,14 @@ button{background:none;border:0;padding:0;margin:0;outline:0;}
 .in-frame{max-width:800px;margin:0 auto;}
 
 /* common-header */
-.common-header{z-index:10000;position:fixed;top:0;left:0;right:0;height:50px;padding:20px;background-color:rgba(245, 231, 216, 0.9)}
+.common-header{z-index:10000;position:fixed;top:0;left:0;right:0;height:70px;padding:20px;background-color:rgba(245, 231, 216, 0.9)}
 .common-header a{display:inline-block;border-radius:6px;transition:all 0.3s ease-out;}
 .common-header a:hover,
 .common-header a:hover{background:#eee;}
 .common-header a.header-ci,
-.common-header a.header-nav{position:absolute;top:20px;width:50px;height:50px;text-align:center;}
-.common-header a.header-ci{z-index:200;left:20px;font-size:1.875em;font-weight:bold;color:#00cc99;line-height:52px;}
-.common-header a.header-nav{right:20px;}
+.common-header a.header-nav{position:absolute;top:20px;height:50px;text-align:center;}
+.common-header a.header-ci{z-index:200;left:40px;font-size:1.625em;font-weight:bold;color:#00cc99;line-height:52px;}
+.common-header a.header-nav{right:30px;width:50px;}
 .common-header a.header-nav span{position:absolute;top:50%;left:50%;display:block;width:25px;height:3px;margin:-1px 0 0 -12px;background:#00cc99;}
 .common-header a.header-nav span:before,
 .common-header a.header-nav span:after{content:'';position:absolute;left:0;display:block;width:100%;height:3px;background:#00cc99;}
@@ -114,8 +114,9 @@ article.article a{border-bottom:1px solid #777;}
 #modal-frame{z-index:-20000;position:fixed;top:0;left:0;right:0;bottom:0;padding:100px 50px 50px 50px;background:#FFF;overflow-y:auto;opacity:0;
     -webkit-transform: translateZ(-80px);
             transform: translateZ(-80px);}
-#modal-frame h2{display:block;color:#111;line-height:1;font-size:2.250em;font-weight:normal;letter-spacing:-4px;margin:0 0 40px;}
+#modal-frame h2{display:block;color:#111;line-height:1.2em;font-size:2.250em;font-weight:normal;word-break:keep-all;letter-spacing:-4px;margin:0 0 40px;}
 #modal-frame .description{color:#333;font-size:0.938em;line-height:1.600em;margin:0 0 40px;}
+#modal-frame .description img{display:block;max-width:100%;margin:10px 0;}
 #modal-frame .site-info{}
 #modal-frame .site-info a{display:inline-block;height:40px;color:#FFF;line-height:40px;font-weight:bold;padding:0 20px;margin:10px 0 0 0;background:#00cc99;border-radius:40px;}
 #modal-frame .site-info a:first-child{margin:0;}
