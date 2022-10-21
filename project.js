@@ -1,6 +1,15 @@
 $(function() {
     var projects = [
         {
+            p_code : "p06",
+            p_title : "비즈니스피플 모바일 부분개편",
+            p_desc : "현재 모바일 부분 개편 UI개발 작업 중..<br>오픈일은 11월 15일 예정",
+            p_url_txt : "",
+            p_url : "",
+            p_murl_txt : "",
+            p_murl : ""
+        },
+        {
             p_code : "p05",
             p_title : "루니파크 런처",
             p_desc : "루니파크는 steam과 같이 유저들이 여러 콘솔게임을 pc에서 할수있도록 제공해주는 게임플랫폼 회사입니다.<br><br>루니파크에서 만든 플랫폼을 루니파크 런처라고 합니다. 루니파크 런처는 루니파크 서비스를 제공하고 있는 PC방에서 제공하고 있습니다. <br><br>루니파크 런처는 게임목록, 게임상세, 로그인, 회원가입, 마이페이지, 토너먼트 등을 이용할수 있으며 모든 UI개발을 리액트로 작업하였습니다. <br>그 중 회원가입과 게임상세 페이지는 직접 Front-end 작업까지 하였습니다. 리액트로 처음 작업해보는 거라 처음에 공부부터 하며 많은 삽질을 하며 작업하였습니다.<br> 안타깝게도 확인할수 있는 url이 따로 없으며 PC방에서만 확인이 가능합니다. 이미지로만 보여드리는 점 양해바랍니다. 아래 이미지가 제가 직접 Front-end까지 작업한 페이지입니다.<br><img src='img/thumb_lunipark_launcher.png' alt=''><img src='img/thumb_lunipark_launcher_02.png' alt=''><img src='img/thumb_lunipark_launcher_03.png' alt=''><img src='img/thumb_lunipark_launcher_04.png' alt=''>",
