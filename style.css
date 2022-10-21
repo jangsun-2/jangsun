@@ -111,7 +111,7 @@ article.article a{border-bottom:1px solid #777;}
 .project-list li a .title{z-index:2;position:relative;text-align:center;color:#FFF;font-size:1.875em;letter-spacing:-2px;text-align:center;line-height:1;font-weight:normal;line-height:140%;word-break:keep-all;padding:0 30px;}
 
 /* modal-frame */
-#modal-frame{z-index:-20000;position:fixed;top:0;left:0;right:0;bottom:0;max-height:90%;padding:100px 50px 50px 50px;background:#FFF;overflow-y:auto;opacity:0;
+#modal-frame{z-index:-20000;position:fixed;top:0;left:0;right:0;bottom:0;max-height:100%;padding:100px 50px 50px 50px;background:#FFF;overflow-y:auto;opacity:0;
     -webkit-transform: translateZ(-80px);
             transform: translateZ(-80px);}
 #modal-frame h2{display:block;color:#111;line-height:1.2em;font-size:2.250em;font-weight:normal;word-break:keep-all;letter-spacing:-4px;margin:0 0 40px;}
@@ -231,7 +231,7 @@ article.article a{border-bottom:1px solid #777;}
     #main-frame:after{content:'';display:block;clear:both;}
     #main-frame .name-card{float:left;display:inline-block;width:46%;padding:50px 50px 180px;margin:0 10px 0;}
     #main-frame .nav{float:right;display:inline-block;width:49%;}
-    #modal-frame{top:50%;left:50%;right:inherit;bottom:inherit;width:800px;height:auto;margin-left:-400px;}
+    #modal-frame{top:50%;left:50%;right:inherit;bottom:inherit;width:800px;height:auto;max-height:90%;margin-left:-400px;}
     .in-frame{margin-top:100px;}
     .common-header a.header-nav{display:none;}
     .common-header .header-menu,
